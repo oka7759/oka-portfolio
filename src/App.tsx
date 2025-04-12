@@ -1,29 +1,22 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import { Top } from '@/components/Top'
+import GlobalStyles from '@/styles/Globalstyles.styles'
+import ReactGA from 'react-ga4'
+import '@/font/index.css'
+import SideButton from './components/SideButton'
+import { AboutMe } from './components/AboutMe'
+import 'bootstrap-icons/font/bootstrap-icons.css'
+import { Career } from './components/Career'
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  ReactGA.initialize('G-D702SXPF4F')
   return (
     <>
-      <div className='flex'>
-        <a href='https://vite.dev' target='_blank'>
-          <img src={viteLogo} className='logo' alt='Vite logo' />
-        </a>
-        <a href='https://react.dev' target='_blank'>
-          <img src={reactLogo} className='logo react' alt='React logo' />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className='card'>
-        <button onClick={() => setCount((count) => count + 1)}>count is {count}</button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className='read-the-docs'>Click on the Vite and React logos to learn more</p>
+      <GlobalStyles />
+      <SideButton />
+      <Top />
+      <AboutMe />
+      <Career />
     </>
   )
 }
