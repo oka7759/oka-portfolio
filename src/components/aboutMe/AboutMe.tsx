@@ -1,7 +1,7 @@
 import tw from 'tailwind-styled-components'
 import img from '@/assets/images/char.png'
-import { InterviewBox } from './aboutMe/InterviewBox'
-import { SkillBox } from './aboutMe/SkillBox'
+import { InterviewBox } from './InterviewBox'
+import { SkillBox } from './SkillBox'
 
 export const AboutMe = () => {
   return (
@@ -17,11 +17,11 @@ export const AboutMe = () => {
         </Section>
         <Section>
           <SectionTitle>Skill & Tools</SectionTitle>
-          <div className='grid grid-cols-3 gap-5 mt-10'>
+          <SkillContainer>
             <SkillBox />
             <SkillBox />
             <SkillBox />
-          </div>
+          </SkillContainer>
         </Section>
       </Content>
     </Wrap>
@@ -57,4 +57,7 @@ w-full mb-30
 `
 export const SectionTitle = tw.h3`
 text-4xl text-white font-black
+`
+export const SkillContainer = tw.div`
+grid grid-cols-3 gap-5 mt-10
 `

@@ -1,12 +1,12 @@
 import './App.css'
-import { Top } from '@/components/Top'
+import { Top } from '@/components/top/Top'
 import GlobalStyles from '@/styles/Globalstyles.styles'
 import ReactGA from 'react-ga4'
 import '@/font/index.css'
 import SideButton from './components/SideButton'
-import { AboutMe } from './components/AboutMe'
+import { AboutMe } from './components/aboutMe/AboutMe'
 import 'bootstrap-icons/font/bootstrap-icons.css'
-import { Career } from './components/Career'
+import { Mid } from './components/mid/Mid'
 
 function App() {
   ReactGA.initialize('G-D702SXPF4F')
@@ -16,7 +16,7 @@ function App() {
       <SideButton />
       <Top />
       <AboutMe />
-      <Career />
+      <Mid />
     </>
   )
 }

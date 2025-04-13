@@ -1,17 +1,18 @@
 import tw from 'tailwind-styled-components'
+import { Workspace } from './workspace/Workspace'
+import { ContentsArea } from './ContentsArea'
+import { Project } from './project/Project'
+import { Education } from './education/Education'
 
-export const Career = () => {
+export const Mid = () => {
   return (
     <Wrap>
-      <div className='sticky top-10 flex flex-col pl-10 gap-5'>
+      <LeftMenu>
         <Title>Career</Title>
         <Title>Project</Title>
         <Title>Education</Title>
-      </div>
-      <div className='w-full grid grid-cols-2 gap-3 m-10'>
-        <div className='p-10 bg-amber-50 rounded-xl min-h-16'>1</div>
-        <div className='p-10 bg-amber-50 rounded-xl min-h-16'>1</div>
-      </div>
+      </LeftMenu>
+      <ContentsArea items={<Education />} />
     </Wrap>
   )
 }
@@ -39,4 +40,8 @@ w-full mb-30
 `
 export const SectionTitle = tw.h3`
 text-4xl text-white font-black
+`
+
+export const LeftMenu = tw.div`
+sticky top-10 flex flex-col pl-10 gap-5
 `
