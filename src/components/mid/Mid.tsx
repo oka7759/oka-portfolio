@@ -2,17 +2,27 @@ import tw from 'tailwind-styled-components'
 import { Workspace } from './workspace/Workspace'
 import { ContentsArea } from './ContentsArea'
 import { Project } from './project/Project'
-import { Education } from './education/Education'
+import { useRecoilState } from 'recoil'
+import { SelectedMenuIndex } from '@/recoil/atoms/CommonAtom'
 
 export const Mid = () => {
+  const [selectedMenu, setSelectedMenu] = useRecoilState(SelectedMenuIndex)
   return (
     <Wrap>
       <LeftMenu>
-        <Title>Career</Title>
-        <Title>Project</Title>
-        <Title>Education</Title>
+        <Title $active={selectedMenu === 0} onClick={() => setSelectedMenu(0)}>
+          Career
+        </Title>
+        <Title $active={selectedMenu === 1} onClick={() => setSelectedMenu(1)}>
+          Project
+        </Title>
+        <Title $active={selectedMenu === 2} onClick={() => setSelectedMenu(2)}>
+          Education
+        </Title>
       </LeftMenu>
-      <ContentsArea items={<Education />} />
+      <ContentsArea
+        items={selectedMenu == 0 ? <Workspace /> : selectedMenu == 1 ? <Project /> : <Workspace />}
+      />
     </Wrap>
   )
 }
@@ -25,10 +35,12 @@ bg-cover
 bg-center
 flex
 gap-15
+min-h-lvh 
 `
 
-export const Title = tw.h1`
-text-white text-6xl font-extrabold 
+export const Title = tw.h1<{ $active?: boolean }>`
+  text-6xl font-extrabold cursor-pointer
+  ${(p) => (p.$active ? 'text-white' : 'text-neutral-400')}
 `
 
 export const Character = tw.img`

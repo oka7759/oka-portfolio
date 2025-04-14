@@ -7,6 +7,7 @@ import SideButton from './components/SideButton'
 import { AboutMe } from './components/aboutMe/AboutMe'
 import 'bootstrap-icons/font/bootstrap-icons.css'
 import { Mid } from './components/mid/Mid'
+import { Bottom } from './components/bottom/Bottom'
 
 function App() {
   ReactGA.initialize('G-D702SXPF4F')
@@ -17,6 +18,7 @@ function App() {
       <Top />
       <AboutMe />
       <Mid />
+      <Bottom />
     </>
   )
 }
