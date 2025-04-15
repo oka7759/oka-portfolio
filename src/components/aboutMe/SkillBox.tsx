@@ -1,21 +1,23 @@
-import { c } from 'node_modules/vite/dist/node/moduleRunnerTransport.d-CXw_Ws6P'
 import tw from 'tailwind-styled-components'
+
+import { Icon } from '../Icon'
 
 export const SkillBox = () => {
   return (
     <div>
       <Title>Front-End</Title>
       <Wrap>
-        <Item />
-        <Item />
-        <Item />
+        <Icon icon='JAVA' />
+        <Icon icon='HTML' />
+        <Icon icon='JAVA' />
       </Wrap>
     </div>
   )
 }
 
 export const Title = tw.h3`
-text-white mb-5`
+text-white mb-5
+`
 
 export const Wrap = tw.div`
 flex gap-3

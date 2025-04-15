@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+import svgr from 'vite-plugin-svgr'
 import path from 'path'
 import dotenv from 'dotenv'
 
@@ -10,7 +11,7 @@ export default defineConfig(({ mode }) => {
   dotenv.config({ path: envPath })
 
   return {
-    plugins: [react(), tailwindcss()],
+    plugins: [react(), tailwindcss(), svgr()],
     resolve: {
       alias: [
         { find: '@', replacement: path.resolve(__dirname, 'src') }, // 절대 경로로 변경

@@ -2,42 +2,48 @@ import tw from 'tailwind-styled-components'
 
 export const Workspace = () => {
   return (
-    <Container>
-      <Box>
-        <div>
-          <DueText>2020-04 ~ 2020-04</DueText>
-          <Company>헬사베일</Company>
-          <Position>fullstack developer</Position>
-        </div>
-        <List>
-          <li>다양한 프로젝트 구현</li>
-          <li>다양한 프로젝트 구현</li>
-          <li>다양한 프로젝트 구현</li>
-          <li>다양한 프로젝트 구현</li>
-        </List>
-      </Box>
-      <Box>
-        <div>
-          <DueText>2020-04 ~ 2020-04</DueText>
-          <Company>헬사베일</Company>
-          <Position>fullstack developer</Position>
-        </div>
-        <List>
-          <li>다양한 프로젝트 구현</li>
-          <li>다양한 프로젝트 구현</li>
-          <li>다양한 프로젝트 구현</li>
-          <li>다양한 프로젝트 구현</li>
-        </List>
-      </Box>
-    </Container>
+    <Wrap>
+      <Container>
+        <Box>
+          <div>
+            <DueText>2020-04 ~ 2020-04</DueText>
+            <Company>헬사베일</Company>
+            <Position>fullstack developer</Position>
+          </div>
+          <List>
+            <li>다양한 프로젝트 구현</li>
+            <li>다양한 프로젝트 구현</li>
+            <li>다양한 프로젝트 구현</li>
+            <li>다양한 프로젝트 구현</li>
+          </List>
+        </Box>
+        <Box>
+          <div>
+            <DueText>2020-04 ~ 2020-04</DueText>
+            <Company>헬사베일</Company>
+            <Position>fullstack developer</Position>
+          </div>
+          <List>
+            <li>다양한 프로젝트 구현</li>
+            <li>다양한 프로젝트 구현</li>
+            <li>다양한 프로젝트 구현</li>
+            <li>다양한 프로젝트 구현</li>
+          </List>
+        </Box>
+      </Container>
+    </Wrap>
   )
 }
 
+export const Wrap = tw.div`
+min-h-lvh 
+`
 export const Container = tw.div`
-grid grid-cols-2 gap-3
+grid grid-cols-2 gap-3  max-w-[1700px] py-10
+
 `
 export const Box = tw.div`
-p-10 bg-neutral-800 rounded-xl 
+p-10 bg-neutral-800 rounded-xl max-h-[500px] 
 `
 
 export const DueText = tw.p`

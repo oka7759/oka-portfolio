@@ -49,3 +49,15 @@ export interface CareerData {
 }
 
 export type Menu = 'Main' | 'Introduce' | 'Skill' | 'Archive' | 'Project' | 'Experience'
+
+export type StackIcon =
+  | 'JAVA'
+  | 'JS'
+  | 'TS'
+  | 'REACT_JS'
+  | 'NEXT_JS'
+  | 'HTML'
+  | 'CSS'
+  | 'SPRINGBOOT'
+  | 'MARIADB'
+  | 'DOCKER'
