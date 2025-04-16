@@ -1,35 +1,33 @@
+import { Icon } from '@/components/Icon'
+import { CareerAndEduData } from '@/types/common'
 import tw from 'tailwind-styled-components'
 
-export const Workspace = () => {
+export const Workspace = ({ careerAndDEdu }: { careerAndDEdu: CareerAndEduData[] }) => {
   return (
     <Wrap>
       <Container>
-        <Box>
-          <div>
-            <DueText>2020-04 ~ 2020-04</DueText>
-            <Company>헬사베일</Company>
-            <Position>fullstack developer</Position>
-          </div>
-          <List>
-            <li>다양한 프로젝트 구현</li>
-            <li>다양한 프로젝트 구현</li>
-            <li>다양한 프로젝트 구현</li>
-            <li>다양한 프로젝트 구현</li>
-          </List>
-        </Box>
-        <Box>
-          <div>
-            <DueText>2020-04 ~ 2020-04</DueText>
-            <Company>헬사베일</Company>
-            <Position>fullstack developer</Position>
-          </div>
-          <List>
-            <li>다양한 프로젝트 구현</li>
-            <li>다양한 프로젝트 구현</li>
-            <li>다양한 프로젝트 구현</li>
-            <li>다양한 프로젝트 구현</li>
-          </List>
-        </Box>
+        {careerAndDEdu.map((item, idx) => {
+          const { due, name, position, working, skills } = item
+          return (
+            <Box key={idx}>
+              <div>
+                <DueText>{due}</DueText>
+                <Company>{name}</Company>
+                <Position>{position}</Position>
+              </div>
+              <List>
+                {working.map((work, idx) => {
+                  return <li key={idx}>{work}</li>
+                })}
+              </List>
+              <Skills>
+                {skills.map((item, idx) => (
+                  <Icon key={idx} icon={item} />
+                ))}
+              </Skills>
+            </Box>
+          )
+        })}
       </Container>
     </Wrap>
   )
@@ -59,4 +57,8 @@ text-base text-white
 
 export const List = tw.ul`
 list-disc text-base text-gray-400 pl-5 mt-5
+`
+
+export const Skills = tw.div`
+mt-10 flex gap-2 flex-wrap
 `

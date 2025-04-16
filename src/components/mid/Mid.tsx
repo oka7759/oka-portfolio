@@ -4,6 +4,7 @@ import { ContentsArea } from './ContentsArea'
 import { Project } from './project/Project'
 import { useRecoilState } from 'recoil'
 import { SelectedMenuIndex } from '@/recoil/atoms/CommonAtom'
+import { CAREER_DATA } from '@/MockData'
 
 export const Mid = () => {
   const [selectedMenu, setSelectedMenu] = useRecoilState(SelectedMenuIndex)
@@ -23,8 +24,8 @@ export const Mid = () => {
         </LeftMenu>
       </div>
       <Contents>
-        <Workspace />
-        <Project /> <Workspace />
+        <Workspace careerAndDEdu={CAREER_DATA} />
+        <Project /> <Workspace careerAndDEdu={CAREER_DATA} />
       </Contents>
     </Wrap>
   )

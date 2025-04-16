@@ -1,25 +1,26 @@
+import { ProjectData } from '@/types/common'
 import tw from 'tailwind-styled-components'
 
-export const ProjectItem = () => {
-  return (
-    <Item>
-      <Top>
-        <Thumnail
-          src='https://kr.object.ncloudstorage.com/oka-tech/images/next.png'
-          alt='Next Image'
-        />
-      </Top>
-      <Text>
-        <Title> 프로젝트 1</Title>
-        <Discription>여러 프로젝트를 제작했음</Discription>
-      </Text>
-      <Tags>
-        <Tag>팀</Tag>
-        <Tag>반응형</Tag>
-        <Tag>디자인</Tag>
-      </Tags>
-    </Item>
-  )
+export const ProjectItem = ({ project }: { project: ProjectData[] }) => {
+  return project.map((item, idx) => {
+    const { type, img, name, desc, tags } = item
+    return (
+      <Item key={`${type}_${idx}`}>
+        <Top>
+          <Thumnail src={img} alt={`${name}s image`} />
+        </Top>
+        <Text>
+          <Title> {name}</Title>
+          <Discription>{desc}</Discription>
+        </Text>
+        <Tags>
+          {tags.map((item, idx) => {
+            return <Tag key={idx}>{item}</Tag>
+          })}
+        </Tags>
+      </Item>
+    )
+  })
 }
 
 export const Thumnail = tw.img`

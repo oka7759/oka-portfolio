@@ -8,6 +8,10 @@ import MySql from '@/assets/icons/MySQL.svg?react'
 import REACT_JS from '@/assets/icons/React.svg?react' // React 이름 충돌 방지
 import Spring from '@/assets/icons/Spring.svg?react'
 import Ts from '@/assets/icons/TypeScript.svg?react'
+import Vscode from '@/assets/icons/VsCode.svg?react'
+import IntelliJ from '@/assets/icons/IntelliJ.svg?react'
+import TailWindCss from '@/assets/icons/TailwindCSS.svg?react'
+
 import tw from 'tailwind-styled-components'
 import { StackIcon } from '@/types/common' // Importing StackIcon enum
 
@@ -23,9 +27,12 @@ const iconMap: Record<StackIcon, React.FC<React.SVGProps<SVGSVGElement>>> = {
   JAVA: Java,
   REACT_JS: REACT_JS,
   NEXT_JS: Nextjs,
-  SPRINGBOOT: Spring,
+  SPRING_BOOT: Spring,
   MARIADB: MySql,
   DOCKER: Docker,
+  VSCODE: Vscode,
+  INTELLIJ: IntelliJ,
+  TAILWIND: TailWindCss,
 }
 
 export const Icon = ({ icon }: Props) => {

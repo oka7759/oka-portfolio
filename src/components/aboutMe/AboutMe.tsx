@@ -2,6 +2,7 @@ import tw from 'tailwind-styled-components'
 import img from '@/assets/images/char.png'
 import { InterviewBox } from './InterviewBox'
 import { SkillBox } from './SkillBox'
+import { SKILL_DATA, INTERVIEW_DATA } from '@/MockData'
 
 export const AboutMe = () => {
   return (
@@ -11,16 +12,16 @@ export const AboutMe = () => {
         <Character src={img} />
         <Section>
           <SectionTitle>Interview</SectionTitle>
-          <InterviewBox />
-          <InterviewBox />
-          <InterviewBox />
+          {INTERVIEW_DATA.map((interview, idx) => {
+            return <InterviewBox key={idx} interview={interview} />
+          })}
         </Section>
         <Section>
           <SectionTitle>Skill & Tools</SectionTitle>
           <SkillContainer>
-            <SkillBox />
-            <SkillBox />
-            <SkillBox />
+            {SKILL_DATA.map((skill, idx) => {
+              return <SkillBox key={idx} stack={skill} />
+            })}
           </SkillContainer>
         </Section>
       </Content>

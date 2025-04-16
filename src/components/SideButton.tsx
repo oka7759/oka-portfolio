@@ -6,6 +6,7 @@ export default function SideButton() {
       <div className='w-14 h-14 bg-white rounded-full flex items-center justify-center'>
         <i className='bi bi-envelope-fill text-3xl'></i>
       </div>
+
       <div className='w-14 h-14 bg-white rounded-full flex items-center justify-center'>
         <i className='bi bi-github text-3xl'></i>
       </div>

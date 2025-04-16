@@ -1,15 +1,12 @@
+import { InterviewData } from '@/types/common'
 import tw from 'tailwind-styled-components'
 
-export const InterviewBox = () => {
+export const InterviewBox = ({ interview }: { interview: InterviewData }) => {
+  const { question, answer } = interview
   return (
     <Box>
-      <Title>Q. 퍼블리셔에서 개발자로 전향한 이유는?</Title>
-      <Content>
-        웹퍼블리셔로 각종 웹사이트의 외관을 만드는 일을 하면서 그속의 개발을 만드는 일에 <br />
-        언제나 갈증을 가지고 있었습니다.
-        <br />
-        1년 3개월 정도의 웹퍼블리셔로 근무를 하던중{' '}
-      </Content>
+      <Title>{`Q. ${question}`}</Title>
+      <Content>{answer}</Content>
     </Box>
   )
 }

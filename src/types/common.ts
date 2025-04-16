@@ -1,54 +1,20 @@
-export interface SectionData<T> {
-  color: string
-  title: string
-  data: T // T 타입의 배열
-}
-export interface AboutData {
-  imageUrl: string
-  title: string
-  icon: string
-  content: string
-}
-
-export interface ArchiveData {
-  imageUrl: string
-  title: string
-  content: string
-}
-
 export interface SkillData {
-  type: SkillType
-  icon: string
-  skill: { name: string; color: string }[]
+  position: string
+  skill: StackIcon[]
 }
 
-export enum SkillType {
-  LANGUAGE = 'Language',
-  FRONTEND = 'Frontend',
-  BACKEND = 'Backend',
-  ETC = 'Etc',
+export interface InterviewData {
+  question: string
+  answer: string
 }
 
-export interface ProjectData {
-  title: string
-  date: string
-  description: string
-  resource: number
-  subtitle: string
-  content: string[]
-  url: string
-  stacks: string[]
-}
-
-export interface CareerData {
+export interface CareerAndEduData {
+  due: string
   name: string
-  date: string
-  role: string
-  description: string
-  img: string
+  position: string
+  working: string[]
+  skills: StackIcon[]
 }
-
-export type Menu = 'Main' | 'Introduce' | 'Skill' | 'Archive' | 'Project' | 'Experience'
 
 export type StackIcon =
   | 'JAVA'
@@ -58,6 +24,17 @@ export type StackIcon =
   | 'NEXT_JS'
   | 'HTML'
   | 'CSS'
-  | 'SPRINGBOOT'
+  | 'SPRING_BOOT'
   | 'MARIADB'
   | 'DOCKER'
+  | 'VSCODE'
+  | 'INTELLIJ'
+  | 'TAILWIND'
+
+export interface ProjectData {
+  type: number
+  img: string
+  name: string
+  desc: string
+  tags: string[]
+}
