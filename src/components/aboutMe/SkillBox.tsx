@@ -22,7 +22,7 @@ text-white mb-5
 `
 
 export const Wrap = tw.div`
-flex gap-3 flex-wrap
+flex gap-5 flex-wrap
 `
 
 export const Item = tw.div`

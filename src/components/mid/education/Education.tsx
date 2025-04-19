@@ -1,25 +1,20 @@
 import { Icon } from '@/components/Icon'
-import { CareerData } from '@/types/common'
+import { EduData } from '@/types/common'
 import tw from 'tailwind-styled-components'
 
-export const Workspace = ({ career }: { career: CareerData[] }) => {
+export const Education = ({ edu }: { edu: EduData[] }) => {
   return (
     <Wrap>
       <Container>
-        {career.map((item, idx) => {
-          const { due, name, position, working, skills } = item
+        {edu.map((item, idx) => {
+          const { due, name, disc, skills } = item
           return (
             <Box key={idx}>
               <div>
                 <DueText>{due}</DueText>
                 <Company>{name}</Company>
-                <Position>{position}</Position>
+                <Position>{disc}</Position>
               </div>
-              <List>
-                {working.map((work, idx) => {
-                  return <li key={idx}>{work}</li>
-                })}
-              </List>
               <Skills>
                 {skills.map((item, idx) => (
                   <Icon key={idx} icon={item} />
@@ -41,7 +36,7 @@ grid grid-cols-2 gap-3  max-w-[1700px] py-10
 
 `
 export const Box = tw.div`
-p-10 bg-neutral-800 rounded-xl max-h-[500px] flex flex-col justify-between
+p-10 bg-neutral-800 rounded-xl max-h-[500px] 
 `
 
 export const DueText = tw.p`

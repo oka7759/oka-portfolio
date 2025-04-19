@@ -1,31 +1,40 @@
 import tw from 'tailwind-styled-components'
 import { Workspace } from './workspace/Workspace'
-import { ContentsArea } from './ContentsArea'
 import { Project } from './project/Project'
-import { useRecoilState } from 'recoil'
+import { useRecoilValue } from 'recoil'
 import { SelectedMenuIndex } from '@/recoil/atoms/CommonAtom'
-import { CAREER_DATA } from '@/MockData'
+import { CAREER_DATA, EDU_DATA } from '@/MockData'
+import useSelectMenu from '@/hooks/useSelectMenu'
+import { Education } from './education/Education'
 
 export const Mid = () => {
-  const [selectedMenu, setSelectedMenu] = useRecoilState(SelectedMenuIndex)
+  const selectedMenu = useRecoilValue(SelectedMenuIndex)
+  const { careerRef, projectRef, educationRef, scrollToSection } = useSelectMenu()
   return (
     <Wrap>
       <div>
         <LeftMenu>
-          <Title $active={selectedMenu === 0} onClick={() => setSelectedMenu(0)}>
+          <Title $active={selectedMenu === 0} onClick={() => scrollToSection(0)}>
             Career
           </Title>
-          <Title $active={selectedMenu === 1} onClick={() => setSelectedMenu(1)}>
+          <Title $active={selectedMenu === 1} onClick={() => scrollToSection(1)}>
             Project
           </Title>
-          <Title $active={selectedMenu === 2} onClick={() => setSelectedMenu(2)}>
+          <Title $active={selectedMenu === 2} onClick={() => scrollToSection(2)}>
             Education
           </Title>
         </LeftMenu>
       </div>
       <Contents>
-        <Workspace careerAndDEdu={CAREER_DATA} />
-        <Project /> <Workspace careerAndDEdu={CAREER_DATA} />
+        <div ref={careerRef}>
+          <Workspace career={CAREER_DATA} />
+        </div>
+        <div ref={projectRef}>
+          <Project />
+        </div>
+        <div ref={educationRef}>
+          <Education edu={EDU_DATA} />
+        </div>
       </Contents>
     </Wrap>
   )
@@ -43,7 +52,7 @@ min-h-lvh
 
 `
 export const LeftMenu = tw.div`
-sticky left-0 top-10 flex flex-col pl-10 gap-5 flex-1
+sticky left-0 top-10 flex flex-col pl-10 gap-5  h-screen
 `
 
 export const Title = tw.h1<{ $active?: boolean }>`

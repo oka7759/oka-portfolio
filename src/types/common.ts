@@ -8,7 +8,7 @@ export interface InterviewData {
   answer: string
 }
 
-export interface CareerAndEduData {
+export interface CareerData {
   due: string
   name: string
   position: string
@@ -37,4 +37,20 @@ export interface ProjectData {
   name: string
   desc: string
   tags: string[]
+}
+
+export interface EduData {
+  due: string
+  name: string
+  disc: string
+  skills: StackIcon[]
+}
+
+export interface SideBtnData {
+  icon: string
+  tooltipId: string
+  tooltipText: string
+  actionKey?: 'goToTop' | 'goToGithub' | 'copyEmail'
+  link: string
+  onClick?: () => void
 }

@@ -1,4 +1,11 @@
-import { InterviewData, SkillData, CareerAndEduData, ProjectData } from '@/types/common'
+import {
+  InterviewData,
+  SkillData,
+  CareerData,
+  ProjectData,
+  EduData,
+  SideBtnData,
+} from '@/types/common'
 
 const SKILL_DATA: SkillData[] = [
   { position: 'Front-End', skill: ['JS', 'TS', 'REACT_JS', 'NEXT_JS', 'HTML', 'CSS', 'TAILWIND'] },
@@ -24,7 +31,7 @@ const INTERVIEW_DATA: InterviewData[] = [
   },
 ]
 
-const CAREER_DATA: CareerAndEduData[] = [
+const CAREER_DATA: CareerData[] = [
   {
     due: '2023-03 ~ 2025-02',
     name: 'Hexaveil',
@@ -45,6 +52,27 @@ const CAREER_DATA: CareerAndEduData[] = [
       '다수의 학회, 학술대회 UX/UI를 구현함',
       '클라이언트와 직접 소통하고 응대하여 프로젝트를 완성',
     ],
+    skills: ['HTML', 'CSS', 'JS'],
+  },
+]
+
+const EDU_DATA: EduData[] = [
+  {
+    due: '2025년 3월 ~',
+    name: '한국방송통신대학 ',
+    disc: '컴퓨터 과학과 3학년 ',
+    skills: [],
+  },
+  {
+    due: '2022-06 ~ 2022-09',
+    name: '위코드 부트캠프',
+    disc: '프론트엔드 개발자 교육과정',
+    skills: ['JS', 'REACT_JS'],
+  },
+  {
+    due: '2019-12 ~ 2020-06',
+    name: '이젠컴퓨터아카데미',
+    disc: '웹 UI/UX 콘텐츠 디자인 교육과정',
     skills: ['HTML', 'CSS', 'JS'],
   },
 ]
@@ -94,4 +122,28 @@ const PROJECT_DATA: ProjectData[] = [
   },
 ]
 
-export { SKILL_DATA, INTERVIEW_DATA, CAREER_DATA, PROJECT_DATA }
+const SIDE_BUTTON_DATA: SideBtnData[] = [
+  {
+    icon: 'bi bi-envelope-fill',
+    tooltipText: '이메일 복사',
+    tooltipId: 'emailBtn',
+    actionKey: 'copyEmail',
+    link: 'eokhwa222@gmail.com',
+  },
+  {
+    icon: 'bi bi-github',
+    tooltipText: '깃헙 이동',
+    tooltipId: 'gitBtn',
+    actionKey: 'goToGithub',
+    link: 'https://github.com/oka7759',
+  },
+  {
+    icon: 'bi bi-chevron-bar-up',
+    tooltipText: '위로 이동',
+    tooltipId: 'topBtn',
+    actionKey: 'goToTop',
+    link: '',
+  },
+]
+
+export { SKILL_DATA, INTERVIEW_DATA, CAREER_DATA, PROJECT_DATA, EDU_DATA, SIDE_BUTTON_DATA }

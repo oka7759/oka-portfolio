@@ -4,14 +4,14 @@ import img from '@/assets/images/test.png'
 export const Top = () => {
   return (
     <Wrap>
-      <Heardline>
+      <Headline>
         <Title>Developer</Title>
-        <SubTilte>퍼블리셔를 시작으로 개발자 3년차 개발자 정억화입니다.</SubTilte>
+        <SubTitle>퍼블리셔를 시작으로 개발자 3년차 개발자 정억화입니다.</SubTitle>
         <Description>
           급이 다른 <b>성실함</b>과 <b>책임감</b>을 바탕으로, <br />내 서비스를 만든다는 마음으로
           고객의 시선에서 고민하는 개발자입니다.
         </Description>
-      </Heardline>
+      </Headline>
       <MyImg src={img} />
     </Wrap>
   )
@@ -28,7 +28,7 @@ bg-cover
 bg-center
 
 `
-export const Heardline = tw.div`
+export const Headline = tw.div`
 m-auto
 max-w-6xl
 pt-30
@@ -40,7 +40,7 @@ text-[160px]
 font-extrabold 
 text-white
 `
-export const SubTilte = tw.p`
+export const SubTitle = tw.p`
 text-5xl text-gray-800 -mt-17 font-medium
 `
 
