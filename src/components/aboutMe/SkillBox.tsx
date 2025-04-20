@@ -18,13 +18,21 @@ export const SkillBox = ({ stack }: { stack: SkillData }) => {
 }
 
 export const Title = tw.h3`
-text-white mb-5 
+text-2xl
+font-medium
+text-white
+mb-5 
 `
 
 export const Wrap = tw.div`
-flex gap-5 flex-wrap
+flex 
+gap-5 
+flex-wrap
 `
 
 export const Item = tw.div`
-bg-white w-16 h-12 rounded-xl
+bg-white 
+w-16 
+h-12 
+rounded-xl
 `

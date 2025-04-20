@@ -1,4 +1,7 @@
+import { BOTTOM_URL } from '@/MockData'
+
 import tw from 'tailwind-styled-components'
+import { Link } from './Link'
 
 export const Bottom = () => {
   return (
@@ -10,16 +13,15 @@ export const Bottom = () => {
           오늘보다 내일 <b>내일</b>보다 <b>내년</b>에 <b>더 빛나는 개발자</b>가 되겠습니다.
         </Description>
       </Heardline>
-      <div className='absolute bottom-0 left-1/2 translate-x-[-50%]'>
-        <div className='flex gap-5 text-xl font-extrabold justify-center'>
-          <span className='border-b-4 leading-8'>Blog</span>
-          <span className='border-b-4 leading-8'>GitHub</span>
-        </div>
+      <BottomContainer>
+        <ButtonWrap>
+          {BOTTOM_URL.map((item, idx) => {
+            return <Link key={idx} linkData={item} />
+          })}
+        </ButtonWrap>
 
-        <p className='my-12 text-neutral-400 text-base'>
-          Copyright 2025. oka-tech all rights reserved.
-        </p>
-      </div>
+        <Copyright>Copyright 2025. oka-tech all rights reserved.</Copyright>
+      </BottomContainer>
     </Wrap>
   )
 }
@@ -32,6 +34,7 @@ h-lvh
 bg-[url('@/assets/images/bg01.png')]
 bg-cover 
 bg-center
+px-5
 `
 export const Heardline = tw.div`
 m-auto
@@ -41,14 +44,46 @@ text-center
 `
 
 export const Title = tw.h1`
-text-[160px]
+text-6xl
+xl:text-[160px]
 font-extrabold 
 text-white
 `
 export const SubTilte = tw.p`
-text-5xl text-gray-800 -mt-17 font-medium
+text-2xl
+mt-5
+px-5
+xl:text-5xl
+xl:-mt-8
+text-gray-800
+font-medium
 `
 
 export const Description = tw.p`
-text-xl mt-30
+text-lg
+mt-10
+xl:text-xl 
+xl:mt-30
+`
+export const Copyright = tw.p`
+text-sm
+my-12 
+text-neutral-400 
+xl:text-base
+`
+
+export const BottomContainer = tw.div`
+w-full
+text-center
+absolute 
+bottom-0 
+left-1/2 
+translate-x-[-50%]
+`
+export const ButtonWrap = tw.div`
+flex 
+gap-5 
+text-xl 
+font-extrabold 
+justify-center
 `

@@ -26,6 +26,7 @@ h-lvh
 bg-[url('@/assets/images/bg01.png')]
 bg-cover 
 bg-center
+px-5
 
 `
 export const Headline = tw.div`
@@ -36,18 +37,32 @@ text-center
 `
 
 export const Title = tw.h1`
-text-[160px]
+text-6xl
+xl:text-[160px]
 font-extrabold 
 text-white
 `
 export const SubTitle = tw.p`
-text-5xl text-gray-800 -mt-17 font-medium
+text-2xl
+mt-5
+px-5
+xl:text-5xl
+xl:-mt-8
+text-gray-800
+font-medium
 `
 
 export const Description = tw.p`
-text-xl mt-10
+text-lg
+xl:text-xl 
+mt-10
 `
 
 export const MyImg = tw.img`
-absolute bottom-0 left-1/2 translate-x-[-50%]
+w-[50%]
+lg:w-auto
+absolute 
+bottom-0 
+left-1/2 
+translate-x-[-50%]
 `

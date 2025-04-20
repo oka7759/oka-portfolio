@@ -5,6 +5,7 @@ import {
   ProjectData,
   EduData,
   SideBtnData,
+  LinkData,
 } from '@/types/common'
 
 const SKILL_DATA: SkillData[] = [
@@ -146,4 +147,17 @@ const SIDE_BUTTON_DATA: SideBtnData[] = [
   },
 ]
 
-export { SKILL_DATA, INTERVIEW_DATA, CAREER_DATA, PROJECT_DATA, EDU_DATA, SIDE_BUTTON_DATA }
+const BOTTOM_URL: LinkData[] = [
+  { text: 'Blog', url: 'https://blog.oka-tech.site/' },
+  { text: 'GitHub', url: 'https://github.com/oka7759' },
+]
+
+export {
+  SKILL_DATA,
+  INTERVIEW_DATA,
+  CAREER_DATA,
+  PROJECT_DATA,
+  EDU_DATA,
+  SIDE_BUTTON_DATA,
+  BOTTOM_URL,
+}

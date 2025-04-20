@@ -36,6 +36,7 @@ w-full
 bg-[#1E1E1E]
 bg-cover 
 bg-center
+p-4
 `
 export const Content = tw.div`
 m-auto
@@ -60,5 +61,11 @@ export const SectionTitle = tw.h3`
 text-4xl text-white font-black
 `
 export const SkillContainer = tw.div`
-grid grid-cols-3 gap-5 mt-10
+
+grid 
+grid-cols-1
+md:grid-cols-2
+xl:grid-cols-3 
+gap-10
+mt-10
 `

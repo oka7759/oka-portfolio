@@ -54,3 +54,8 @@ export interface SideBtnData {
   link: string
   onClick?: () => void
 }
+
+export interface LinkData {
+  text: string
+  url: string
+}

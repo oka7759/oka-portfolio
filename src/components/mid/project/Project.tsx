@@ -31,11 +31,26 @@ export const Project = () => {
 }
 
 export const Projects = tw.div`
-flex flex-col items-start gap-10  min-h-lvh  max-w-[1700px] py-10
+flex 
+flex-col 
+items-start 
+gap-10  
+min-h-lvh  
+max-w-[1700px] 
+py-10
 `
 
 export const Nav = tw.nav`
-flex px-5 py-2 rounded-full bg-neutral-800 gap-3 font-extrabold text-xl text-white items-center
+flex 
+px-5 
+py-2 
+rounded-full 
+bg-neutral-800 
+gap-3 
+font-extrabold 
+text-xl 
+text-white 
+items-center
 `
 
 export const Active = tw.span<{ $active?: boolean }>`
@@ -43,5 +58,10 @@ export const Active = tw.span<{ $active?: boolean }>`
 `
 
 export const Container = tw.div`
-grid grid-cols-3 w-full  gap-5
+grid 
+grid-cols-1
+lg:grid-cols-2
+xl:grid-cols-3
+w-full  
+gap-5
 `

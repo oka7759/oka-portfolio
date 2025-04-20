@@ -36,7 +36,7 @@ const useSelectMenu = () => {
           }
         }
       },
-      { threshold: 0.7 }, // 50% 이상 보여야 인식
+      { threshold: 0.5 }, // 50% 이상 보여야 인식
     )
 
     sectionRefs.forEach(({ ref }) => {

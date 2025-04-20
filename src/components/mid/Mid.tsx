@@ -12,7 +12,7 @@ export const Mid = () => {
   const { careerRef, projectRef, educationRef, scrollToSection } = useSelectMenu()
   return (
     <Wrap>
-      <div>
+      <MenuContainer>
         <LeftMenu>
           <Title $active={selectedMenu === 0} onClick={() => scrollToSection(0)}>
             Career
@@ -24,7 +24,7 @@ export const Mid = () => {
             Education
           </Title>
         </LeftMenu>
-      </div>
+      </MenuContainer>
       <Contents>
         <div ref={careerRef}>
           <Workspace career={CAREER_DATA} />
@@ -46,17 +46,38 @@ w-full
 bg-[#1E1E1E]
 bg-cover 
 bg-center
-flex
+xl:flex
 gap-15
 min-h-lvh
+p-4
+`
+
+export const MenuContainer = tw.div`
+sticky 
+top-0
+z-999
 
 `
 export const LeftMenu = tw.div`
-sticky left-0 top-10 flex flex-col pl-10 gap-5  h-screen
+flex 
+gap-5  
+lg:top-10 
+pl-10 
+p-4
+bg-[#1E1E1E]
+xl:flex-col 
+xl:h-screen
+xl:sticky
+xl:left-0
+
 `
 
 export const Title = tw.h1<{ $active?: boolean }>`
-text-6xl font-extrabold cursor-pointer
+text-2xl
+lg:text-3xl
+xl:text-6xl
+font-extrabold
+cursor-pointer
   ${(p) => (p.$active ? 'text-white' : 'text-neutral-400')}
 `
 
@@ -68,8 +89,15 @@ export const Section = tw.section`
 w-full mb-30
 `
 export const SectionTitle = tw.h3`
-text-4xl text-white font-black
+text-4xl
+text-white
+font-black
 `
 export const Contents = tw.div`
-w-full m-10 max-w-full mx-auto mt-30 
+w-full
+m-10
+max-w-full 
+mx-auto 
+mt-0
+xl:mt-30 
 `

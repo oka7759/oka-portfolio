@@ -1,7 +1,7 @@
 import tw from 'tailwind-styled-components'
 import RoundButton from './RoundButton'
 import { SIDE_BUTTON_DATA } from '@/MockData'
-import { handleButtonClick } from '@/utils/SideMenu'
+import { handleButtonClick } from '@/utils/buttonFunction'
 
 export default function SideButton() {
   return (
