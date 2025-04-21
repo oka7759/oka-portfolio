@@ -3,6 +3,8 @@ import { ProjectItem } from './ProjectItem'
 import { useRecoilState } from 'recoil'
 import { SelectedProjectIndex } from '@/recoil/atoms/CommonAtom'
 import { PROJECT_DATA } from '@/MockData'
+import { ScrollAni } from '@/utils/animation'
+import { useArrivedScroll } from '@/hooks/useArrivedScroll'
 
 export const Project = () => {
   const [selected, setSelected] = useRecoilState(SelectedProjectIndex)
@@ -10,6 +12,7 @@ export const Project = () => {
     if (selected === 0) return true // 모두 표시
     return project.type === selected - 1 // selected 1이면 type 0, selected 2이면 type 1
   })
+  const { scrollRef, scrollEl } = useArrivedScroll()
   return (
     <Projects>
       <Nav>
@@ -23,9 +26,11 @@ export const Project = () => {
           Personal
         </Active>
       </Nav>
-      <Container>
-        <ProjectItem project={filteredProjects} />
-      </Container>
+      <ScrollAni className={`${scrollEl ? 'fadeAn fadeIn w-full' : 'fadeOut'}`} ref={scrollRef}>
+        <Container>
+          <ProjectItem project={filteredProjects} />
+        </Container>
+      </ScrollAni>
     </Projects>
   )
 }

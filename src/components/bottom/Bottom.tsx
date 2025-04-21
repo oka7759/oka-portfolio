@@ -2,17 +2,22 @@ import { BOTTOM_URL } from '@/MockData'
 
 import tw from 'tailwind-styled-components'
 import { Link } from './Link'
+import { ScrollAni } from '@/utils/animation'
+import { useArrivedScroll } from '@/hooks/useArrivedScroll'
 
 export const Bottom = () => {
+  const { scrollRef, scrollEl } = useArrivedScroll()
   return (
     <Wrap>
-      <Heardline>
-        <Title>Thank You!</Title>
-        <SubTilte>찾아 주셔서 감사합니다.</SubTilte>
-        <Description>
-          오늘보다 내일 <b>내일</b>보다 <b>내년</b>에 <b>더 빛나는 개발자</b>가 되겠습니다.
-        </Description>
-      </Heardline>
+      <ScrollAni className={`${scrollEl ? 'fadeAn fadeIn w-full' : 'fadeOut'}`} ref={scrollRef}>
+        <Headline>
+          <Title>Thank You!</Title>
+          <SubTitle>찾아 주셔서 감사합니다.</SubTitle>
+          <Description>
+            오늘보다 내일 <b>내일</b>보다 <b>내년</b>에 <b>더 빛나는 개발자</b>가 되겠습니다.
+          </Description>
+        </Headline>
+      </ScrollAni>
       <BottomContainer>
         <ButtonWrap>
           {BOTTOM_URL.map((item, idx) => {
@@ -36,7 +41,7 @@ bg-cover
 bg-center
 px-5
 `
-export const Heardline = tw.div`
+export const Headline = tw.div`
 m-auto
 max-w-6xl
 pt-30
@@ -49,7 +54,7 @@ xl:text-[160px]
 font-extrabold 
 text-white
 `
-export const SubTilte = tw.p`
+export const SubTitle = tw.p`
 text-2xl
 mt-5
 px-5

@@ -1,34 +1,39 @@
 import { Icon } from '@/components/Icon'
+import { useArrivedScroll } from '@/hooks/useArrivedScroll'
 import { CareerData } from '@/types/common'
+import { ScrollAni } from '@/utils/animation'
 import tw from 'tailwind-styled-components'
 
 export const Workspace = ({ career }: { career: CareerData[] }) => {
+  const { scrollRef, scrollEl } = useArrivedScroll()
   return (
     <Wrap>
-      <Container>
-        {career.map((item, idx) => {
-          const { due, name, position, working, skills } = item
-          return (
-            <Box key={idx}>
-              <div>
-                <DueText>{due}</DueText>
-                <Company>{name}</Company>
-                <Position>{position}</Position>
-              </div>
-              <List>
-                {working.map((work, idx) => {
-                  return <li key={idx}>{work}</li>
-                })}
-              </List>
-              <Skills>
-                {skills.map((item, idx) => (
-                  <Icon key={idx} icon={item} />
-                ))}
-              </Skills>
-            </Box>
-          )
-        })}
-      </Container>
+      <ScrollAni className={`${scrollEl ? 'fadeAn fadeIn' : 'fadeOut'}`} ref={scrollRef}>
+        <Container>
+          {career.map((item, idx) => {
+            const { due, name, position, working, skills } = item
+            return (
+              <Box key={idx}>
+                <div>
+                  <DueText>{due}</DueText>
+                  <Company>{name}</Company>
+                  <Position>{position}</Position>
+                </div>
+                <List>
+                  {working.map((work, idx) => {
+                    return <li key={idx}>{work}</li>
+                  })}
+                </List>
+                <Skills>
+                  {skills.map((item, idx) => (
+                    <Icon key={idx} icon={item} />
+                  ))}
+                </Skills>
+              </Box>
+            )
+          })}
+        </Container>
+      </ScrollAni>
     </Wrap>
   )
 }

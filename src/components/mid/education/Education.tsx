@@ -1,29 +1,34 @@
 import { Icon } from '@/components/Icon'
+import { useArrivedScroll } from '@/hooks/useArrivedScroll'
 import { EduData } from '@/types/common'
+import { ScrollAni } from '@/utils/animation'
 import tw from 'tailwind-styled-components'
 
 export const Education = ({ edu }: { edu: EduData[] }) => {
+  const { scrollRef, scrollEl } = useArrivedScroll()
   return (
     <Wrap>
-      <Container>
-        {edu.map((item, idx) => {
-          const { due, name, disc, skills } = item
-          return (
-            <Box key={idx}>
-              <div>
-                <DueText>{due}</DueText>
-                <Company>{name}</Company>
-                <Position>{disc}</Position>
-              </div>
-              <Skills>
-                {skills.map((item, idx) => (
-                  <Icon key={idx} icon={item} />
-                ))}
-              </Skills>
-            </Box>
-          )
-        })}
-      </Container>
+      <ScrollAni className={`${scrollEl ? 'fadeAn fadeIn' : 'fadeOut'}`} ref={scrollRef}>
+        <Container>
+          {edu.map((item, idx) => {
+            const { due, name, disc, skills } = item
+            return (
+              <Box key={idx}>
+                <div>
+                  <DueText>{due}</DueText>
+                  <Company>{name}</Company>
+                  <Position>{disc}</Position>
+                </div>
+                <Skills>
+                  {skills.map((item, idx) => (
+                    <Icon key={idx} icon={item} />
+                  ))}
+                </Skills>
+              </Box>
+            )
+          })}
+        </Container>
+      </ScrollAni>
     </Wrap>
   )
 }

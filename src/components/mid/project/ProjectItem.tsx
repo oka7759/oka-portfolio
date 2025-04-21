@@ -7,11 +7,11 @@ export const ProjectItem = ({ project }: { project: ProjectData[] }) => {
     return (
       <Item key={`${type}_${idx}`}>
         <Top>
-          <Thumnail src={img} alt={`${name}s image`} />
+          <Thumbnail src={img} alt={`${name}s image`} />
         </Top>
         <Text>
           <Title> {name}</Title>
-          <Discription>{desc}</Discription>
+          <Description>{desc}</Description>
         </Text>
         <Tags>
           {tags.map((item, idx) => {
@@ -23,7 +23,7 @@ export const ProjectItem = ({ project }: { project: ProjectData[] }) => {
   })
 }
 
-export const Thumnail = tw.img`
+export const Thumbnail = tw.img`
 absolute top-0 left-0 w-full h-full object-cover
 `
 
@@ -42,7 +42,7 @@ export const Title = tw.h3`
 text-2xl text-white mb-3
 `
 
-export const Discription = tw.p`
+export const Description = tw.p`
 text-base text-neutral-400
 `
 
