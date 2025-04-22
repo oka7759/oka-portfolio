@@ -59,3 +59,17 @@ export interface LinkData {
   text: string
   url: string
 }
+
+export interface Project {
+  meta: ProjectData
+  due: string
+  member?: string
+  description: string
+  keyFeatures?: string[]
+  language: string[]
+  contribution?: { title: string; text: string[] }[]
+  trouble?: { text: string; contents: string[] }[]
+  remembrance?: string[]
+  images: string[]
+  urls?: { git?: string; deployment?: string }
+}

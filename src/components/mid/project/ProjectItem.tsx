@@ -21,7 +21,7 @@ export const ProjectItem = ({ project }: { project: ProjectData[] }) => {
         <Overlay className='group-hover:flex'>
           <h1 className='text-white text-2xl'>{name}</h1>
           <OverlayContent>
-            <span className=' font-normal  '>자세히 보기</span>
+            <span className='   '>자세히 보기</span>
           </OverlayContent>
         </Overlay>
       </Item>
@@ -93,6 +93,7 @@ border-2
 border-amber-50 
 py-2 
 px-3 
+font-normal
 text-center
 transition-colors 
 duration-300 

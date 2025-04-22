@@ -12,7 +12,6 @@ import Vscode from '@/assets/icons/VsCode.svg?react'
 import IntelliJ from '@/assets/icons/IntelliJ.svg?react'
 import TailWindCss from '@/assets/icons/TailwindCSS.svg?react'
 
-import tw from 'tailwind-styled-components'
 import { StackIcon } from '@/types/common' // Importing StackIcon enum
 
 type Props = {
