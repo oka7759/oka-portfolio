@@ -14,7 +14,10 @@ export const Project = () => {
   })
   const { scrollRef, scrollEl } = useArrivedScroll()
   return (
-    <Projects>
+    <ScrollAni
+      className={`${scrollEl ? 'fadeAn fadeIn max-w-[1700px] xl:mb-100 flex flex-col  items-start  gap-10  ' : 'fadeOut'}`}
+      ref={scrollRef}
+    >
       <Nav>
         <Active $active={selected === 0} onClick={() => setSelected(0)}>
           All
@@ -26,12 +29,10 @@ export const Project = () => {
           Personal
         </Active>
       </Nav>
-      <ScrollAni className={`${scrollEl ? 'fadeAn fadeIn w-full' : 'fadeOut'}`} ref={scrollRef}>
-        <Container>
-          <ProjectItem project={filteredProjects} />
-        </Container>
-      </ScrollAni>
-    </Projects>
+      <Container>
+        <ProjectItem project={filteredProjects} />
+      </Container>
+    </ScrollAni>
   )
 }
 

@@ -39,7 +39,7 @@ export const Workspace = ({ career }: { career: CareerData[] }) => {
 }
 
 export const Wrap = tw.div`
-xl:min-h-lvh 
+xl:mb-100
 `
 export const Container = tw.div`
 grid 

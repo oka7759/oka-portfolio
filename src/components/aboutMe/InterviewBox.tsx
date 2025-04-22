@@ -15,22 +15,23 @@ export const Box = tw.div`
 mt-4
 p-6
 xl:mt-10 
-xl:p-10 
-rounded-xl bg-neutral-800
+xl:p-8 
+rounded-xl 
+bg-neutral-800
 `
 export const Title = tw.h3`
-text-xl
-xl:text-2xl 
+text-lg
+xl:text-xl 
 text-white 
 font-bold
 `
 
 export const Content = tw.p`
 mt-3
-text-lg
+text-base
 xl:mt-5 
-xl:text-2xl 
-xl:leading-10 
+xl:text-lg 
+xl:leading-7
 text-white 
 font-light
 `

@@ -39,7 +39,3 @@ export const Icon = ({ icon }: Props) => {
   const IconComponent = iconMap[icon]
   return IconComponent ? <IconComponent className='bg-black w-16 h-12 rounded-xl p-2 ' /> : null
 }
-
-export const Item = tw.div`
-  bg-black w-16 h-12 rounded-xl
-`

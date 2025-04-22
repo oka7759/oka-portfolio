@@ -26,13 +26,13 @@ mb-5
 
 export const Wrap = tw.div`
 flex 
-gap-5 
+gap-1.5
 flex-wrap
 `
 
 export const Item = tw.div`
 bg-white 
-w-16 
-h-12 
+w-14 
+h-10 
 rounded-xl
 `

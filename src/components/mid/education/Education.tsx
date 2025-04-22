@@ -34,7 +34,7 @@ export const Education = ({ edu }: { edu: EduData[] }) => {
 }
 
 export const Wrap = tw.div`
-min-h-lvh 
+xl:mb-100
 `
 export const Container = tw.div`
 grid 

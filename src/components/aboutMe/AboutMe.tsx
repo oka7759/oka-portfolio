@@ -44,7 +44,7 @@ p-4
 `
 export const Content = tw.div`
 m-auto
-max-w-6xl
+max-w-4xl
 flex
 flex-col
 justify-center
@@ -52,7 +52,9 @@ items-center
 delay-150
 `
 export const Title = tw.h1`
-text-white text-6xl font-extrabold p-15
+text-white 
+text-6xl 
+font-extrabold p-15
 `
 
 export const Character = tw.img`
@@ -60,17 +62,19 @@ mb-30
 `
 
 export const Section = tw.section`
-w-full mb-30
+w-full 
+mb-30
 `
 export const SectionTitle = tw.h3`
-text-4xl text-white font-black
+text-4xl 
+text-white 
+font-black
 `
 export const SkillContainer = tw.div`
-
 grid 
 grid-cols-1
 md:grid-cols-2
 xl:grid-cols-3 
-gap-10
+gap-8
 mt-10
 `
