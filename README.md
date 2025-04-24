@@ -1,55 +1,32 @@
-# React + TypeScript + Vite
+# 🏷️ 개발자 정억화 포트폴리오
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+개발자 정억화의 포트폴리오 사이트입니다.  
+React + TypeScript + Vite 기반으로 제작되었으며, 상태 관리는 Recoil을 사용했습니다.  
+디자인은 Tailwind CSS로 구성하였으며, 배포는 Docker 및 Nginx를 활용하여 진행하였습니다.
 
-Currently, two official plugins are available:
+## 🚀 기술 스택
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Language**: TypeScript
+- **Frontend**: React (with Vite)
+- **State Management**: Recoil
+- **Styling**: Tailwind CSS
+- **CI/CD**: GitHub Actions, Docker
 
-## Expanding the ESLint configuration
+## 📷 스크린샷
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+<p align="center">
+  <img src="https://kr.object.ncloudstorage.com/oka-tech/images/portfolion_01.png" width="400"/>
+  <img src="https://kr.object.ncloudstorage.com/oka-tech/images/portfolion_02.png" width="400"/>
+</p>
+<p align="center">
+  <img src="https://kr.object.ncloudstorage.com/oka-tech/images/portfolion_03.png" width="400"/>
+  <img src="https://kr.object.ncloudstorage.com/oka-tech/images/portfolion_04.png" width="400"/>
+</p>
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## 🔗 배포 주소
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+👉 [https://www.oka-tech.site/](https://www.oka-tech.site/)
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
-# oka-portfolio
+> 본 포트폴리오 사이트는 지속적으로 개선 중입니다.
