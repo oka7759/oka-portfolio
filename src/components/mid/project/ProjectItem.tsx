@@ -1,9 +1,11 @@
-import { ProjectData } from '@/types/common'
+import { useModal } from '@/hooks/useModal'
+import { Project, ProjectData } from '@/types/common'
 import tw from 'tailwind-styled-components'
 
-export const ProjectItem = ({ project }: { project: ProjectData[] }) => {
+export const ProjectItem = ({ project }: { project: Project[] }) => {
   return project.map((item, idx) => {
-    const { type, img, name, desc, tags } = item
+    const { type, img, name, desc, tags } = item.meta
+    const { openModal } = useModal(item.id)
     return (
       <Item key={`${type}_${idx}`} className='group'>
         <Top>
@@ -21,7 +23,13 @@ export const ProjectItem = ({ project }: { project: ProjectData[] }) => {
         <Overlay className='group-hover:flex'>
           <h1 className='text-white text-2xl'>{name}</h1>
           <OverlayContent>
-            <span className='   '>자세히 보기</span>
+            <span
+              onClick={() => {
+                openModal()
+              }}
+            >
+              자세히 보기
+            </span>
           </OverlayContent>
         </Overlay>
       </Item>

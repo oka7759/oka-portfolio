@@ -1,7 +1,8 @@
 import { Project } from './types/common'
 
-const POJECT_DATA: Project[] = [
+export const PROJECT_DETAIL_DATA: Project[] = [
   {
+    id: 0,
     meta: {
       type: 0,
       img: 'https://kr.object.ncloudstorage.com/oka-tech/images/next.png',
@@ -34,24 +35,31 @@ const POJECT_DATA: Project[] = [
     ],
     trouble: [
       {
-        text: 'PG 앱 연결 문제',
-        contents: [
+        title: 'PG 앱 연결 문제',
+        text: [
           '고객사의 요구로 특정 PG사를 연동 하였으나 업데이트 대응이 늦어 일부 기능이 PG사에서 제공하는 SDK로만 간편결제를 구현 할수 없었음.',
           '신용카드와 간편결제를 모두 지원하는 웹으로 페이지를 만들어 웹뷰로 구현.',
           '단순히 SDK로 프론트에서 구현하고 데이터만 백에서 처리할수 있었으나 프론트의 고충에 마춰 백엔드에서 구현 하였고 협업의 의미와 다양한 방법으로 문제를 해결을 경험.',
         ],
       },
       {
-        text: 'Kotlin -> Java , JPA -> MyBatis',
-        contents: [
+        title: 'Kotlin -> Java , JPA -> MyBatis',
+        text: [
           '고객사와 커뮤니케이션 문제로 프로젝트가 일부 진행된 사항에서 코틀린에서 자바로 프로젝트를 변경해야 했음',
           'JPA에서 마이바티스로 전환하기 위해 간편한 jpa코드를 모두 SQL로 작성함.',
         ],
       },
     ],
-    images: [''],
+    images: [
+      'https://kr.object.ncloudstorage.com/oka-tech/images/next.png',
+      'https://kr.object.ncloudstorage.com/oka-tech/images/next.png',
+      'https://kr.object.ncloudstorage.com/oka-tech/images/next.png',
+      'https://kr.object.ncloudstorage.com/oka-tech/images/next.png',
+      'https://kr.object.ncloudstorage.com/oka-tech/images/next.png',
+    ],
   },
   {
+    id: 1,
     meta: {
       type: 0,
       img: 'https://kr.object.ncloudstorage.com/oka-tech/images/next.png',
@@ -72,6 +80,7 @@ const POJECT_DATA: Project[] = [
     urls: { deployment: '' },
   },
   {
+    id: 2,
     meta: {
       type: 0,
       img: 'https://kr.object.ncloudstorage.com/oka-tech/images/next.png',
@@ -106,6 +115,7 @@ const POJECT_DATA: Project[] = [
     },
   },
   {
+    id: 3,
     meta: {
       type: 0,
       img: 'https://kr.object.ncloudstorage.com/oka-tech/images/next.png',
@@ -136,6 +146,7 @@ const POJECT_DATA: Project[] = [
     urls: { deployment: 'https://moimpay.com' },
   },
   {
+    id: 4,
     meta: {
       type: 1,
       img: 'https://kr.object.ncloudstorage.com/oka-tech/images/next.png',
@@ -150,6 +161,7 @@ const POJECT_DATA: Project[] = [
     urls: { git: '', deployment: 'https://www.oka-tech.site/' },
   },
   {
+    id: 5,
     meta: {
       type: 1,
       img: 'https://kr.object.ncloudstorage.com/oka-tech/images/next.png',
@@ -164,7 +176,13 @@ const POJECT_DATA: Project[] = [
       '최신 기술 앱라우팅으로 사용하고 익히는 경험을 함.',
       '클라우드 서버 환경을 구축하고 도메인과 SSL인증서를 적용하는 일련의 과정을 온전히 혼자 구축해보는 경험을 함.',
     ],
-    images: [''],
+    images: [
+      'https://kr.object.ncloudstorage.com/oka-tech/images/next.png',
+      'https://kr.object.ncloudstorage.com/oka-tech/images/next.png',
+      'https://kr.object.ncloudstorage.com/oka-tech/images/next.png',
+      'https://kr.object.ncloudstorage.com/oka-tech/images/next.png',
+      'https://kr.object.ncloudstorage.com/oka-tech/images/next.png',
+    ],
     urls: { git: '', deployment: 'https://blog.oka-tech.site/' },
   },
 ]

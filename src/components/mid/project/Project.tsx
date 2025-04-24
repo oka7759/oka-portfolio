@@ -2,15 +2,15 @@ import tw from 'tailwind-styled-components'
 import { ProjectItem } from './ProjectItem'
 import { useRecoilState } from 'recoil'
 import { SelectedProjectIndex } from '@/recoil/atoms/CommonAtom'
-import { PROJECT_DATA } from '@/MockData'
 import { ScrollAni } from '@/utils/animation'
 import { useArrivedScroll } from '@/hooks/useArrivedScroll'
+import { PROJECT_DETAIL_DATA } from '@/PROJECT_DATA'
 
 export const Project = () => {
   const [selected, setSelected] = useRecoilState(SelectedProjectIndex)
-  const filteredProjects = PROJECT_DATA.filter((project) => {
+  const filteredProjects = PROJECT_DETAIL_DATA.filter((project) => {
     if (selected === 0) return true // 모두 표시
-    return project.type === selected - 1 // selected 1이면 type 0, selected 2이면 type 1
+    return project.meta.type === selected - 1 // selected 1이면 type 0, selected 2이면 type 1
   })
   const { scrollRef, scrollEl } = useArrivedScroll()
   return (

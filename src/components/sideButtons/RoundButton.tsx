@@ -7,7 +7,7 @@ export default function RoundButton({ buttonData }: { buttonData: SideBtnData })
   return (
     <>
       <Button data-tooltip-content={tooltipText} data-tooltip-id={tooltipId} onClick={onClick}>
-        <i className={`${icon} text-3xl`}></i>
+        <i className={`${icon} text-3xl leading-none flex-shrink-0`}></i>
       </Button>
       <Tooltip id={tooltipId} place='left' arrowColor='transparent' opacity={0.8} />
     </>
@@ -16,5 +16,6 @@ export default function RoundButton({ buttonData }: { buttonData: SideBtnData })
 
 export const Button = tw.div`
 w-14 h-14 bg-white rounded-full flex items-center justify-center cursor-pointer
+
 
 `

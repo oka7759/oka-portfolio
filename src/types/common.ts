@@ -61,6 +61,7 @@ export interface LinkData {
 }
 
 export interface Project {
+  id: number
   meta: ProjectData
   due: string
   member?: string
@@ -68,8 +69,13 @@ export interface Project {
   keyFeatures?: string[]
   language: string[]
   contribution?: { title: string; text: string[] }[]
-  trouble?: { text: string; contents: string[] }[]
+  trouble?: { title: string; text: string[] }[]
   remembrance?: string[]
   images: string[]
   urls?: { git?: string; deployment?: string }
+}
+
+export interface ModalPropsData {
+  id: number | null
+  isOpen: boolean
 }

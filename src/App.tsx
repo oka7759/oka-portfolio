@@ -8,9 +8,13 @@ import { AboutMe } from './components/aboutMe/AboutMe'
 import 'bootstrap-icons/font/bootstrap-icons.css'
 import { Mid } from './components/mid/Mid'
 import { Bottom } from './components/bottom/Bottom'
+import { ProjectModal } from './components/ProjectModal'
+import { useRecoilValue } from 'recoil'
+import { ModalProps } from './recoil/atoms/CommonAtom'
 
 function App() {
   ReactGA.initialize('G-D702SXPF4F')
+  const selectedMenu = useRecoilValue(ModalProps)
   return (
     <>
       <GlobalStyles />
@@ -19,6 +23,7 @@ function App() {
       <AboutMe />
       <Mid />
       <Bottom />
+      {selectedMenu.isOpen && <ProjectModal />}
     </>
   )
 }
