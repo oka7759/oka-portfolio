@@ -1,10 +1,10 @@
 import tw from 'tailwind-styled-components'
-import { ProjectItem } from './ProjectItem'
 import { useRecoilState } from 'recoil'
 import { SelectedProjectIndex } from '@/recoil/atoms/CommonAtom'
 import { ScrollAni } from '@/utils/animation'
 import { useArrivedScroll } from '@/hooks/useArrivedScroll'
 import { PROJECT_DETAIL_DATA } from '@/PROJECT_DATA'
+import { ProjectItem } from './ProjectItem'
 
 export const Project = () => {
   const [selected, setSelected] = useRecoilState(SelectedProjectIndex)
@@ -30,7 +30,9 @@ export const Project = () => {
         </Active>
       </Nav>
       <Container>
-        <ProjectItem project={filteredProjects} />
+        {filteredProjects.map((item, idx) => {
+          return <ProjectItem key={`projectItem-${idx}`} item={item} />
+        })}
       </Container>
     </ScrollAni>
   )

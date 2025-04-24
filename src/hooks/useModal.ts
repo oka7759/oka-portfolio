@@ -2,7 +2,7 @@ import { ModalProps } from '@/recoil/atoms/CommonAtom'
 import { useEffect } from 'react'
 import { useRecoilState } from 'recoil'
 
-export const useModal = (id: number) => {
+export const useModal = (id: number | null) => {
   const [modalProps, setModalProps] = useRecoilState(ModalProps)
   const openModal = () => {
     setModalProps({ id, isOpen: true })

@@ -1,40 +1,38 @@
 import { useModal } from '@/hooks/useModal'
-import { Project, ProjectData } from '@/types/common'
-import tw from 'tailwind-styled-components'
+import { Project } from '@/types/common'
 
-export const ProjectItem = ({ project }: { project: Project[] }) => {
-  return project.map((item, idx) => {
-    const { type, img, name, desc, tags } = item.meta
-    const { openModal } = useModal(item.id)
-    return (
-      <Item key={`${type}_${idx}`} className='group'>
-        <Top>
-          <Thumbnail src={img} alt={`${name}s image`} />
-        </Top>
-        <Text>
-          <Title> {name}</Title>
-          <Description>{desc}</Description>
-        </Text>
-        <Tags>
-          {tags.map((item, idx) => {
-            return <Tag key={idx}>{item}</Tag>
-          })}
-        </Tags>
-        <Overlay className='group-hover:flex'>
-          <h1 className='text-white text-2xl'>{name}</h1>
-          <OverlayContent>
-            <span
-              onClick={() => {
-                openModal()
-              }}
-            >
-              자세히 보기
-            </span>
-          </OverlayContent>
-        </Overlay>
-      </Item>
-    )
-  })
+import tw from 'tailwind-styled-components'
+export const ProjectItem = ({ item }: { item: Project }) => {
+  const { img, name, desc, tags } = item.meta
+  const { openModal } = useModal(item.id)
+  return (
+    <Item className='group'>
+      <Top>
+        <Thumbnail src={img} alt={`${name}s image`} />
+      </Top>
+      <Text>
+        <Title> {name}</Title>
+        <Description>{desc}</Description>
+      </Text>
+      <Tags>
+        {tags.map((item, idx) => {
+          return <Tag key={idx}>{item}</Tag>
+        })}
+      </Tags>
+      <Overlay className='group-hover:flex'>
+        <h1 className='text-white text-2xl'>{name}</h1>
+        <OverlayContent>
+          <span
+            onClick={() => {
+              openModal()
+            }}
+          >
+            자세히 보기
+          </span>
+        </OverlayContent>
+      </Overlay>
+    </Item>
+  )
 }
 
 export const Item = tw.div`

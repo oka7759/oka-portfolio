@@ -12,6 +12,9 @@ export default defineConfig(({ mode }) => {
 
   return {
     plugins: [react(), tailwindcss(), svgr()],
+    server: {
+      allowedHosts: ['www.oka-tech.site', 'localhost', '127.0.0.1'],
+    },
     resolve: {
       alias: [
         { find: '@', replacement: path.resolve(__dirname, 'src') }, // 절대 경로로 변경
