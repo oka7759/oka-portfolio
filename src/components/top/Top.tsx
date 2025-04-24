@@ -48,10 +48,14 @@ px-5
 
 `
 export const Headline = tw.div`
+absolute
+left-1/2 
+translate-x-[-50%]
 m-auto
-max-w-6xl
+w-full
 pt-30
 text-center
+z-[999]
 `
 
 export const Title = tw(motion.h1)`
@@ -71,13 +75,15 @@ font-medium
 `
 
 export const Description = tw(motion.p)`
-text-lg
+text-base
 xl:text-xl 
 mt-10
 `
 
 export const MyImg = tw.img`
-w-[50%]
+
+max-h-1/2
+
 lg:w-auto
 absolute 
 bottom-0 

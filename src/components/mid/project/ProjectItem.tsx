@@ -72,7 +72,7 @@ text-base text-neutral-400
 `
 
 export const Tags = tw.div`
-flex px-4 gap-2 pt-10 pb-4
+flex px-4 gap-2 pt-10 pb-4 flex-wrap
 `
 export const Tag = tw.span`
 text-white px-2 py-1 text-sm bg-black rounded-md

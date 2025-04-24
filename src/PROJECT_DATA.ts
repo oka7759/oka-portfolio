@@ -51,11 +51,10 @@ export const PROJECT_DETAIL_DATA: Project[] = [
       },
     ],
     images: [
-      'https://kr.object.ncloudstorage.com/oka-tech/images/next.png',
-      'https://kr.object.ncloudstorage.com/oka-tech/images/next.png',
-      'https://kr.object.ncloudstorage.com/oka-tech/images/next.png',
-      'https://kr.object.ncloudstorage.com/oka-tech/images/next.png',
-      'https://kr.object.ncloudstorage.com/oka-tech/images/next.png',
+      'https://kr.object.ncloudstorage.com/oka-tech/images/pf_01.PNG',
+      'https://kr.object.ncloudstorage.com/oka-tech/images/pf_02.PNG',
+      'https://kr.object.ncloudstorage.com/oka-tech/images/pf_03.PNG',
+      'https://kr.object.ncloudstorage.com/oka-tech/images/pf_04.PNG',
     ],
   },
   {
@@ -76,7 +75,12 @@ export const PROJECT_DETAIL_DATA: Project[] = [
       '센터, 고객 관리 관리자페이지',
     ],
     language: ['Next.js', 'Express', 'MariaDB'],
-    images: [''],
+    images: [
+      'https://kr.object.ncloudstorage.com/oka-tech/images/yungyang_01.PNG',
+      'https://kr.object.ncloudstorage.com/oka-tech/images/yungyang_02.PNG',
+      'https://kr.object.ncloudstorage.com/oka-tech/images/yungyang_03.PNG',
+      'https://kr.object.ncloudstorage.com/oka-tech/images/yungyang_04.PNG',
+    ],
     urls: { deployment: '' },
   },
   {
@@ -107,9 +111,13 @@ export const PROJECT_DETAIL_DATA: Project[] = [
       '여러번에 컨셉 변경으로 장기간에 걸쳐 리펙토링 등이 이루어 졌고 그로인해 10개 이상의 앱을 등록,심사를 경험하여 앱출시에 대한 전문적인 지식을 얻음',
       '한앱에 몇천건의 음성파일을 생성하고 클라우드스토리지에 업로드, 수백건의 DB로우를 벌크로 없데이트를 구현해보고 성능개선에 대해 고민하는 경험을 함',
     ],
-    images: [''],
+    images: [
+      'https://kr.object.ncloudstorage.com/oka-tech/images/kwordboost_01.png',
+      'https://kr.object.ncloudstorage.com/oka-tech/images/kwordboost_02.png',
+      'https://kr.object.ncloudstorage.com/oka-tech/images/kwordboost_03.png',
+      'https://kr.object.ncloudstorage.com/oka-tech/images/kwordboost_04.png',
+    ],
     urls: {
-      git: '',
       deployment:
         'https://apps.apple.com/kr/developer/pracsol-inc/id1684893377?see-all=i-phonei-pad-apps',
     },
@@ -142,7 +150,12 @@ export const PROJECT_DETAIL_DATA: Project[] = [
     remembrance: [
       '신입 개발자로 입사하여 첫 백엔드 역활을 맡아 백엔드 지식 없이 첫 프로젝트를 처음부터 끝까지 완성해보는 경험을 함',
     ],
-    images: [''],
+    images: [
+      'https://kr.object.ncloudstorage.com/oka-tech/images/moim_01.png',
+      'https://kr.object.ncloudstorage.com/oka-tech/images/moim_02.png',
+      'https://kr.object.ncloudstorage.com/oka-tech/images/moim_03.png',
+      'https://kr.object.ncloudstorage.com/oka-tech/images/moim_04.png',
+    ],
     urls: { deployment: 'https://moimpay.com' },
   },
   {
@@ -157,7 +170,12 @@ export const PROJECT_DETAIL_DATA: Project[] = [
     due: '2025.04',
     description: '그동안 프로젝트를 정리한 포트롤리오 사이트',
     language: ['React.js', 'Docker', 'NCloud'],
-    images: [''],
+    images: [
+      'https://kr.object.ncloudstorage.com/oka-tech/images/portfolion_01.png',
+      'https://kr.object.ncloudstorage.com/oka-tech/images/portfolion_02.png',
+      'https://kr.object.ncloudstorage.com/oka-tech/images/portfolion_03.png',
+      'https://kr.object.ncloudstorage.com/oka-tech/images/portfolion_04.png',
+    ],
     urls: { git: '', deployment: 'https://www.oka-tech.site/' },
   },
   {
@@ -177,11 +195,10 @@ export const PROJECT_DETAIL_DATA: Project[] = [
       '클라우드 서버 환경을 구축하고 도메인과 SSL인증서를 적용하는 일련의 과정을 온전히 혼자 구축해보는 경험을 함.',
     ],
     images: [
-      'https://kr.object.ncloudstorage.com/oka-tech/images/next.png',
-      'https://kr.object.ncloudstorage.com/oka-tech/images/next.png',
-      'https://kr.object.ncloudstorage.com/oka-tech/images/next.png',
-      'https://kr.object.ncloudstorage.com/oka-tech/images/next.png',
-      'https://kr.object.ncloudstorage.com/oka-tech/images/next.png',
+      'https://kr.object.ncloudstorage.com/oka-tech/images/blog_01.png',
+      'https://kr.object.ncloudstorage.com/oka-tech/images/blog_02.png',
+      'https://kr.object.ncloudstorage.com/oka-tech/images/blog_03.png',
+      'https://kr.object.ncloudstorage.com/oka-tech/images/blog_04.png',
     ],
     urls: { git: '', deployment: 'https://blog.oka-tech.site/' },
   },

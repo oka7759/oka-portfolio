@@ -8,24 +8,14 @@ import { Button } from './sideButtons/RoundButton'
 import { useModal } from '@/hooks/useModal'
 import { goToUrl } from '@/utils/buttonFunction'
 export const ProjectModal = () => {
-  const [modalProps, setModalProps] = useRecoilState(ModalProps)
+  const [modalProps, _] = useRecoilState(ModalProps)
   const { closeModal } = useModal(0)
 
   const projectData = PROJECT_DETAIL_DATA.find((project) => project.id === modalProps.id)
   return projectData ? (
-    <div className='fixed inset-x-0 inset-y-0 z-[999]  py-10 px-40 bg-black overflow-y-auto'>
+    <div className='fixed inset-x-0 inset-y-0 z-[999] py-2 px-2  xl:py-10 xl:px-40 bg-black overflow-y-auto'>
       <div className='relative w-full mx-auto bg-white pb-10 min-h-screen h-auto max-md:h-auto '>
-        <div
-          className=' fixed
-  top-10
-  right-[3rem]
-  flex
-  flex-col
-  items-center
-  gap-5
-  z-[999]
-'
-        >
+        <div className=' xl:fixed xl:top-10 pt-3 xl:right-[3rem] xl:bg-transparent justify-center bg-[#0b4da1] flex xl:flex-col items-center gap-5 z-[999]'>
           <Button
             onClick={() => {
               closeModal()
@@ -95,7 +85,7 @@ export const ProjectModal = () => {
           </div>
           {projectData.keyFeatures && (
             <div className=''>
-              <h3 className='text-2xl font-bold mt-2 mb-4'>✨ 주요 기능</h3>
+              <h3 className='text-2xl font-bold mt-2 mb-4'>🚀 주요 기능</h3>
               <ul className='list-disc pl-10 text-lg'>
                 {projectData.keyFeatures.map((item, idx) => {
                   return <li key={`feature-${idx}`}> {item}</li>
@@ -114,7 +104,7 @@ export const ProjectModal = () => {
 
           {projectData.trouble && (
             <div>
-              <h3 className='text-2xl font-bold mt-2 mb-4'>✨ 문제 해결 </h3>
+              <h3 className='text-2xl font-bold mt-2 mb-4'>📕 문제 해결 </h3>
               {projectData.trouble.map((item, idx) => (
                 <ToggleBox key={idx} {...item} type={true} />
               ))}
@@ -132,11 +122,11 @@ export const ProjectModal = () => {
             </div>
           )}
 
-          {projectData.images.length > 0 && (
+          {projectData.images.length ? (
             <div className=''>
-              <h3 className='text-2xl font-bold mt-2 mb-4'>✨ 스크린샷</h3>
+              <h3 className='text-2xl font-bold mt-2 mb-4'> 스크린샷</h3>
 
-              <div className='grid grid-cols-3 gap-2 '>
+              <div className='grid grid-cols-4 gap-2 '>
                 {projectData.images.map((item, idx) => {
                   return (
                     <div key={`img-${idx}`}>
@@ -146,6 +136,8 @@ export const ProjectModal = () => {
                 })}
               </div>
             </div>
+          ) : (
+            <></>
           )}
         </section>
       </div>
