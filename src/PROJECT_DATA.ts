@@ -5,7 +5,7 @@ export const PROJECT_DETAIL_DATA: Project[] = [
     id: 0,
     meta: {
       type: 0,
-      img: 'https://kr.object.ncloudstorage.com/oka-tech/images/next.png',
+      img: 'https://kr.object.ncloudstorage.com/oka-tech/images/pf_01.PNG',
       name: '파킹프렌즈 앱',
       desc: '유료 주차장 예약앱 ',
       tags: ['앱', '백엔드', 'PG'],
@@ -61,7 +61,7 @@ export const PROJECT_DETAIL_DATA: Project[] = [
     id: 1,
     meta: {
       type: 0,
-      img: 'https://kr.object.ncloudstorage.com/oka-tech/images/next.png',
+      img: 'https://kr.object.ncloudstorage.com/oka-tech/images/yungyang_03.PNG',
       name: '영양알고케어',
       desc: '독고노인, 고령자들의 식단, 건강진단을 제공하는 웹',
       tags: ['프론트', '백엔드', 'PWA'],
@@ -81,13 +81,13 @@ export const PROJECT_DETAIL_DATA: Project[] = [
       'https://kr.object.ncloudstorage.com/oka-tech/images/yungyang_03.PNG',
       'https://kr.object.ncloudstorage.com/oka-tech/images/yungyang_04.PNG',
     ],
-    urls: { deployment: '' },
+    urls: { deployment: 'https://www.youngyangalgocare.com/' },
   },
   {
     id: 2,
     meta: {
       type: 0,
-      img: 'https://kr.object.ncloudstorage.com/oka-tech/images/next.png',
+      img: 'https://kr.object.ncloudstorage.com/oka-tech/images/kwordboost_01.png',
       name: 'K-WORD BOOST, Touch Learn',
       desc: '외국어 학습을 위한 글로벌앱',
       tags: ['백엔드', 'TTS', 'BATCH', 'Azure'],
@@ -126,7 +126,7 @@ export const PROJECT_DETAIL_DATA: Project[] = [
     id: 3,
     meta: {
       type: 0,
-      img: 'https://kr.object.ncloudstorage.com/oka-tech/images/next.png',
+      img: 'https://kr.object.ncloudstorage.com/oka-tech/images/moim_01.png',
       name: '모임페이',
       desc: '동호회의 회비결제, 커뮤니티, 회비납부 웹',
       tags: ['백엔드', '프론트', 'PG', '본인인증'],
@@ -162,7 +162,7 @@ export const PROJECT_DETAIL_DATA: Project[] = [
     id: 4,
     meta: {
       type: 1,
-      img: 'https://kr.object.ncloudstorage.com/oka-tech/images/next.png',
+      img: 'https://kr.object.ncloudstorage.com/oka-tech/images/portfolion_01.png',
       name: '개인 포트폴리오',
       desc: '그동안 프로젝트를 정리한 포트롤리오 사이트',
       tags: ['포트폴리오', 'Docker', 'NCloud'],
@@ -176,13 +176,16 @@ export const PROJECT_DETAIL_DATA: Project[] = [
       'https://kr.object.ncloudstorage.com/oka-tech/images/portfolion_03.png',
       'https://kr.object.ncloudstorage.com/oka-tech/images/portfolion_04.png',
     ],
-    urls: { git: '', deployment: 'https://www.oka-tech.site/' },
+    urls: {
+      git: 'https://github.com/oka7759/oka-portfolio',
+      deployment: 'https://www.oka-tech.site/',
+    },
   },
   {
     id: 5,
     meta: {
       type: 1,
-      img: 'https://kr.object.ncloudstorage.com/oka-tech/images/next.png',
+      img: 'https://kr.object.ncloudstorage.com/oka-tech/images/blog_01.png',
       name: '개인 기술블로그',
       desc: '그동안 프로젝트를 정리한 포트롤리오 사이트',
       tags: ['백엔드', '프론트', 'SSR', 'Docker', 'NCloud'],
@@ -200,6 +203,6 @@ export const PROJECT_DETAIL_DATA: Project[] = [
       'https://kr.object.ncloudstorage.com/oka-tech/images/blog_03.png',
       'https://kr.object.ncloudstorage.com/oka-tech/images/blog_04.png',
     ],
-    urls: { git: '', deployment: 'https://blog.oka-tech.site/' },
+    urls: { git: 'https://github.com/oka7759/blog_api', deployment: 'https://blog.oka-tech.site/' },
   },
 ]
