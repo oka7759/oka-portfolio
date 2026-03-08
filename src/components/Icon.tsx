@@ -11,6 +11,8 @@ import Ts from '@/assets/icons/TypeScript.svg?react'
 import Vscode from '@/assets/icons/VsCode.svg?react'
 import IntelliJ from '@/assets/icons/IntelliJ.svg?react'
 import TailWindCss from '@/assets/icons/TailwindCSS.svg?react'
+import Flutter from '@/assets/icons/Flutter.svg?react'
+import AWS from '@/assets/icons/AWS.svg?react'
 
 import { StackIcon } from '@/types/common' // Importing StackIcon enum
 
@@ -32,6 +34,8 @@ const iconMap: Record<StackIcon, React.FC<React.SVGProps<SVGSVGElement>>> = {
   VSCODE: Vscode,
   INTELLIJ: IntelliJ,
   TAILWIND: TailWindCss,
+  AWS: AWS,
+  Flutter: Flutter,
 }
 
 export const Icon = ({ icon }: Props) => {

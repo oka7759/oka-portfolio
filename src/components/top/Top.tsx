@@ -19,7 +19,7 @@ export const Top = () => {
           animate={{ ...OPACITY_1, ...Y_0 }}
           transition={{ ...ANI_TRANSITION, delay: 1 }}
         >
-          퍼블리셔를 시작으로 개발자 3년차 개발자 정억화입니다.
+          퍼블리셔를 시작으로 개발자 4년차 개발자 정억화입니다.
         </SubTitle>
         <Description
           initial={{ ...OPACITY_0, ...Y_M20 }}

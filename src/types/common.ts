@@ -30,6 +30,8 @@ export type StackIcon =
   | 'VSCODE'
   | 'INTELLIJ'
   | 'TAILWIND'
+  | 'AWS'
+  | 'Flutter'
 
 export interface ProjectData {
   type: number

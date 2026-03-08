@@ -9,9 +9,12 @@ import {
 } from '@/types/common'
 
 const SKILL_DATA: SkillData[] = [
-  { position: 'Front-End', skill: ['JS', 'TS', 'REACT_JS', 'NEXT_JS', 'HTML', 'CSS', 'TAILWIND'] },
+  {
+    position: 'Front-End',
+    skill: ['Flutter', 'JS', 'TS', 'REACT_JS', 'NEXT_JS', 'HTML', 'CSS', 'TAILWIND'],
+  },
   { position: 'Back-End', skill: ['JAVA', 'SPRING_BOOT', 'MARIADB'] },
-  { position: 'Tool', skill: ['DOCKER', 'VSCODE', 'INTELLIJ'] },
+  { position: 'Tool', skill: ['AWS', 'DOCKER', 'VSCODE', 'INTELLIJ'] },
 ]
 
 const INTERVIEW_DATA: InterviewData[] = [
@@ -33,6 +36,19 @@ const INTERVIEW_DATA: InterviewData[] = [
 ]
 
 const CAREER_DATA: CareerData[] = [
+  {
+    due: '2025-06 ~ 2025-12',
+    name: '한지한톡',
+    position: 'APP / WEB Fullstack Developer',
+    working: [
+      '한국어 말하기대회 웹 개발',
+      '한국어 동영상 학습앱/웹 개발 / 배포',
+      '오프라인 한국어 학원 상담, 관리 정산 웹 개발',
+      '자체 운영 서비스 관리웹 개발',
+      'AWS 운영 관리',
+    ],
+    skills: ['Flutter', 'JAVA', 'SPRING_BOOT', 'JS', 'TS', 'REACT_JS', 'AWS', 'DOCKER'],
+  },
   {
     due: '2023-03 ~ 2025-02',
     name: 'Hexaveil',
@@ -59,9 +75,9 @@ const CAREER_DATA: CareerData[] = [
 
 const EDU_DATA: EduData[] = [
   {
-    due: '2025년 3월 ~',
+    due: '2025년 3월 ~ 현재',
     name: '한국방송통신대학 ',
-    disc: '컴퓨터 과학과 3학년 ',
+    disc: '컴퓨터 과학과 4학년 ',
     skills: [],
   },
   {
@@ -147,10 +163,7 @@ const SIDE_BUTTON_DATA: SideBtnData[] = [
   },
 ]
 
-const BOTTOM_URL: LinkData[] = [
-  { text: 'Blog', url: 'https://blog.oka-tech.site/' },
-  { text: 'GitHub', url: 'https://github.com/oka7759' },
-]
+const BOTTOM_URL: LinkData[] = [{ text: 'GitHub', url: 'https://github.com/oka7759' }]
 
 export {
   SKILL_DATA,

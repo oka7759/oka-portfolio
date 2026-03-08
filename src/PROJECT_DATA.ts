@@ -5,7 +5,126 @@ export const PROJECT_DETAIL_DATA: Project[] = [
     id: 0,
     meta: {
       type: 0,
-      img: 'https://kr.object.ncloudstorage.com/oka-tech/images/pf_01.PNG',
+      img: 'https://oka-dev-images.s3.ap-northeast-2.amazonaws.com/00.png',
+      name: '한국어 동영상학습 앱/웹',
+      desc: '숏츠 영상으로 한국어를 공부하는 앱/웹 ',
+      tags: ['웹/앱', '백엔드', '기획', '디자인'],
+    },
+    due: '2025.10 ~ 2025.12',
+    member: '기획, 디자인, 앱, 웹, 백엔드 ',
+    description: '유튜브 숏츠 영상으로 한국어를 공부하는 앱/웹 ',
+    keyFeatures: ['짧은 영상 무한 추천', '단어장, 사전 기능', '퀴즈, 퍼즐 기능'],
+    language: ['Flutter', 'React', 'AWS', 'GooglePlayConsole'],
+    contribution: [
+      {
+        title: '간략한 아이디어 받아 기획, 디자인, 구현함 ',
+        text: ['유튜브 숏츠같은 짧은 영상으로 한국어를 학습시키고 싶은 회사의 니즈를 실제 구현'],
+      },
+      {
+        title: '선행 웹개발후 앱으로 확장',
+        text: ['1차 적으로 웹으로 서비스를 구현후 회사의 추가 개발 요구로 앱으로 이식'],
+      },
+      {
+        title: '단순한 숏츠 영상 외에 다양한 학습 방법 추가(퀴즈, 퍼즐)',
+        text: ['한국어학습을 위해 퀴즈, 퍼즐 기능 구현'],
+      },
+    ],
+    trouble: [
+      {
+        title: '개획에 없던 앱개발',
+        text: ['갑작스런 앱개발이 필요한 사항', '언어부터 프레임워크까지 처음부터 학습하여 해결'],
+      },
+      {
+        title: '중국 구형 디바이스 에러 발생',
+        text: [
+          '주 학생층인 중국인이 사용하는 중국산 디바이스의 다양한 오류 발생',
+          '중국 개발 커뮤니티를 번역하여 해결',
+        ],
+      },
+    ],
+    images: [
+      'https://oka-dev-images.s3.ap-northeast-2.amazonaws.com/00-01.png',
+      'https://oka-dev-images.s3.ap-northeast-2.amazonaws.com/00-02.png',
+      'https://oka-dev-images.s3.ap-northeast-2.amazonaws.com/00-03.png',
+      'https://oka-dev-images.s3.ap-northeast-2.amazonaws.com/00-04.png',
+      'https://oka-dev-images.s3.ap-northeast-2.amazonaws.com/00-05.png',
+    ],
+    urls: {
+      deployment: 'https://play.google.com/store/apps/details?id=kr.co.hanzhi.hanzzy_korean',
+    },
+  },
+  {
+    id: 1,
+    meta: {
+      type: 0,
+      img: 'https://oka-dev-images.s3.ap-northeast-2.amazonaws.com/01.png',
+      name: '한국어 말하기대회 시스템',
+      desc: '온라인 한국어 말하기대회 시스템 고도화 ',
+      tags: ['웹', '백엔드', '기획'],
+    },
+    due: '2025.06 ~ 2025.8',
+    member: '프론트, 백엔드 ',
+    description: '한국어 음성을 녹음하고 서버에 전송후 채점, 성적표, 상장등을 제공하는 서비스',
+    keyFeatures: ['음성저장', '채점 모델 api연결', '성적표, 상장 제공', '다국어 제공'],
+    language: ['React', 'AWS', 'SpringBoot'],
+    contribution: [
+      {
+        title: '학생이 녹음한 음성을 서버에 전달',
+        text: ['학생이 웹에서 녹음한 파일을 mp3로 저용량 압축하여 서버에 전달'],
+      },
+      {
+        title: '채점api에 음성 전달후 채점 결과 수신',
+        text: ['음성을 STT작업후 채점모델 api에 전달하여 채점 결과를 서버에 저장'],
+      },
+      {
+        title: '성적표, 상장 출력',
+        text: ['서버의 저장된 채점 데이터로 그래프, 피드백을 생성하여 성적표, 상장을 생성'],
+      },
+    ],
+    trouble: [
+      {
+        title: '고용량 음성파일을 mp3로변환시 오류',
+        text: [
+          '구형 디바이스에서 컨버터 라이브러리 작독 오류',
+          '컨버터 라이브러리를 디바이스에 저장하여 온디바이스에서 처리 ',
+        ],
+      },
+    ],
+    images: [],
+  },
+  {
+    id: 2,
+    meta: {
+      type: 0,
+      img: 'https://oka-dev-images.s3.ap-northeast-2.amazonaws.com/02.png',
+      name: '학원 상담, 정산, 등록 시스템 웹',
+      desc: '학생의 등록상담, 선생님 배정, 급여관리 프로그램',
+      tags: ['프론트', '백엔드', '기획', '디자인'],
+    },
+    due: '2025.11 ~ 2025.12',
+    member: '프론트, 백엔드, 기획, 디자인',
+    description:
+      '학생의 상담부터 금액제안, 선생님 배정, 선생님 수업 관리, 정산관리등 전반적인 학원 운영 시스템',
+    keyFeatures: ['학생 상담관리', '선생님 배정', '학생 평가', '선생님 급여 정산'],
+    language: ['React', 'AWS', 'Springboot'],
+    contribution: [
+      {
+        title: '오프라인 학생의 상담 시작부터 히스토리 기록',
+        text: ['기존 엑셀로 관리하던 학원 직접 방문, sns상담을 시스템으로 저장'],
+      },
+      {
+        title: '선생님 배정, 수업진행 상항 저장 기능',
+        text: ['학생과 선생님 배정, 수업시 총수업 차감, 정산 처리 구현'],
+      },
+    ],
+
+    images: [],
+  },
+  {
+    id: 3,
+    meta: {
+      type: 0,
+      img: 'https://oka-dev-images.s3.ap-northeast-2.amazonaws.com/03.png',
       name: '파킹프렌즈 앱',
       desc: '유료 주차장 예약앱 ',
       tags: ['앱', '백엔드', 'PG'],
@@ -51,17 +170,20 @@ export const PROJECT_DETAIL_DATA: Project[] = [
       },
     ],
     images: [
-      'https://kr.object.ncloudstorage.com/oka-tech/images/pf_01.PNG',
-      'https://kr.object.ncloudstorage.com/oka-tech/images/pf_02.PNG',
-      'https://kr.object.ncloudstorage.com/oka-tech/images/pf_03.PNG',
-      'https://kr.object.ncloudstorage.com/oka-tech/images/pf_04.PNG',
+      'https://oka-dev-images.s3.ap-northeast-2.amazonaws.com/03-01.png',
+      'https://oka-dev-images.s3.ap-northeast-2.amazonaws.com/03-02.png',
+      'https://oka-dev-images.s3.ap-northeast-2.amazonaws.com/03-03.png',
+      'https://oka-dev-images.s3.ap-northeast-2.amazonaws.com/03-04.png',
     ],
+    urls: {
+      deployment: 'https://play.google.com/store/apps/details?id=com.misconct.parkingfriends',
+    },
   },
   {
-    id: 1,
+    id: 4,
     meta: {
       type: 0,
-      img: 'https://kr.object.ncloudstorage.com/oka-tech/images/yungyang_03.PNG',
+      img: 'https://oka-dev-images.s3.ap-northeast-2.amazonaws.com/04.png',
       name: '영양알고케어',
       desc: '독고노인, 고령자들의 식단, 건강진단을 제공하는 웹',
       tags: ['프론트', '백엔드', 'PWA'],
@@ -76,18 +198,16 @@ export const PROJECT_DETAIL_DATA: Project[] = [
     ],
     language: ['Next.js', 'Express', 'MariaDB'],
     images: [
-      'https://kr.object.ncloudstorage.com/oka-tech/images/yungyang_01.PNG',
-      'https://kr.object.ncloudstorage.com/oka-tech/images/yungyang_02.PNG',
-      'https://kr.object.ncloudstorage.com/oka-tech/images/yungyang_03.PNG',
-      'https://kr.object.ncloudstorage.com/oka-tech/images/yungyang_04.PNG',
+      'https://oka-dev-images.s3.ap-northeast-2.amazonaws.com/04-01.png',
+      'https://oka-dev-images.s3.ap-northeast-2.amazonaws.com/04-02.png',
     ],
     urls: { deployment: 'https://www.youngyangalgocare.com/' },
   },
   {
-    id: 2,
+    id: 5,
     meta: {
       type: 0,
-      img: 'https://kr.object.ncloudstorage.com/oka-tech/images/kwordboost_01.png',
+      img: 'https://oka-dev-images.s3.ap-northeast-2.amazonaws.com/05.png',
       name: 'K-WORD BOOST, Touch Learn',
       desc: '외국어 학습을 위한 글로벌앱',
       tags: ['백엔드', 'TTS', 'BATCH', 'Azure'],
@@ -112,10 +232,9 @@ export const PROJECT_DETAIL_DATA: Project[] = [
       '한앱에 몇천건의 음성파일을 생성하고 클라우드스토리지에 업로드, 수백건의 DB로우를 벌크로 없데이트를 구현해보고 성능개선에 대해 고민하는 경험을 함',
     ],
     images: [
-      'https://kr.object.ncloudstorage.com/oka-tech/images/kwordboost_01.png',
-      'https://kr.object.ncloudstorage.com/oka-tech/images/kwordboost_02.png',
-      'https://kr.object.ncloudstorage.com/oka-tech/images/kwordboost_03.png',
-      'https://kr.object.ncloudstorage.com/oka-tech/images/kwordboost_04.png',
+      'https://oka-dev-images.s3.ap-northeast-2.amazonaws.com/05-01.png',
+      'https://oka-dev-images.s3.ap-northeast-2.amazonaws.com/05-02.png',
+      'https://oka-dev-images.s3.ap-northeast-2.amazonaws.com/05-03.png',
     ],
     urls: {
       deployment:
@@ -123,10 +242,10 @@ export const PROJECT_DETAIL_DATA: Project[] = [
     },
   },
   {
-    id: 3,
+    id: 6,
     meta: {
       type: 0,
-      img: 'https://kr.object.ncloudstorage.com/oka-tech/images/moim_01.png',
+      img: 'https://oka-dev-images.s3.ap-northeast-2.amazonaws.com/06.png',
       name: '모임페이',
       desc: '동호회의 회비결제, 커뮤니티, 회비납부 웹',
       tags: ['백엔드', '프론트', 'PG', '본인인증'],
@@ -150,19 +269,13 @@ export const PROJECT_DETAIL_DATA: Project[] = [
     remembrance: [
       '신입 개발자로 입사하여 첫 백엔드 역활을 맡아 백엔드 지식 없이 첫 프로젝트를 처음부터 끝까지 완성해보는 경험을 함',
     ],
-    images: [
-      'https://kr.object.ncloudstorage.com/oka-tech/images/moim_01.png',
-      'https://kr.object.ncloudstorage.com/oka-tech/images/moim_02.png',
-      'https://kr.object.ncloudstorage.com/oka-tech/images/moim_03.png',
-      'https://kr.object.ncloudstorage.com/oka-tech/images/moim_04.png',
-    ],
-    urls: { deployment: 'https://moimpay.com' },
+    images: [],
   },
   {
-    id: 4,
+    id: 7,
     meta: {
       type: 1,
-      img: 'https://kr.object.ncloudstorage.com/oka-tech/images/portfolion_01.png',
+      img: 'https://oka-dev-images.s3.ap-northeast-2.amazonaws.com/07.png',
       name: '개인 포트폴리오',
       desc: '그동안 프로젝트를 정리한 포트롤리오 사이트',
       tags: ['포트폴리오', 'Docker', 'NCloud'],
@@ -170,22 +283,17 @@ export const PROJECT_DETAIL_DATA: Project[] = [
     due: '2025.04',
     description: '그동안 프로젝트를 정리한 포트롤리오 사이트',
     language: ['React.js', 'Docker', 'NCloud'],
-    images: [
-      'https://kr.object.ncloudstorage.com/oka-tech/images/portfolion_01.png',
-      'https://kr.object.ncloudstorage.com/oka-tech/images/portfolion_02.png',
-      'https://kr.object.ncloudstorage.com/oka-tech/images/portfolion_03.png',
-      'https://kr.object.ncloudstorage.com/oka-tech/images/portfolion_04.png',
-    ],
+    images: [],
     urls: {
       git: 'https://github.com/oka7759/oka-portfolio',
-      deployment: 'https://www.oka-tech.site/',
+      deployment: 'https://www.oka-dev.xyz/',
     },
   },
   {
-    id: 5,
+    id: 8,
     meta: {
       type: 1,
-      img: 'https://kr.object.ncloudstorage.com/oka-tech/images/blog_01.png',
+      img: 'https://oka-dev-images.s3.ap-northeast-2.amazonaws.com/08.jpg',
       name: '개인 기술블로그',
       desc: '그동안 프로젝트를 정리한 포트롤리오 사이트',
       tags: ['백엔드', '프론트', 'SSR', 'Docker', 'NCloud'],
@@ -197,12 +305,7 @@ export const PROJECT_DETAIL_DATA: Project[] = [
       '최신 기술 앱라우팅으로 사용하고 익히는 경험을 함.',
       '클라우드 서버 환경을 구축하고 도메인과 SSL인증서를 적용하는 일련의 과정을 온전히 혼자 구축해보는 경험을 함.',
     ],
-    images: [
-      'https://kr.object.ncloudstorage.com/oka-tech/images/blog_01.png',
-      'https://kr.object.ncloudstorage.com/oka-tech/images/blog_02.png',
-      'https://kr.object.ncloudstorage.com/oka-tech/images/blog_03.png',
-      'https://kr.object.ncloudstorage.com/oka-tech/images/blog_04.png',
-    ],
+    images: [],
     urls: { git: 'https://github.com/oka7759/blog_api', deployment: 'https://blog.oka-tech.site/' },
   },
 ]
